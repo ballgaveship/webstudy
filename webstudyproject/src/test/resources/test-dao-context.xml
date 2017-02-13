@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.3.xsd">
+
+	<!-- ========================================= Mybatis Context ========================================= -->
+	<bean id="dataSource"
+		class="org.springframework.jdbc.datasource.SimpleDriverDataSource">
+		<property name="driverClass" value="org.postgresql.Driver" />
+		<property name="url" value="$jdbc:postgresql://localhost:5432/test" />
+		<property name="username" value="test" />
+		<property name="password" value="test_password" />
+	</bean>
+	
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="configLocation" value="classpath:mybatis/mybatis-config.xml" />
+	</bean>
+	
+	<bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
+		<constructor-arg index="0" ref="sqlSessionFactory" />
+	</bean>
+
+	<!-- 맵퍼 인터페이스와 맵퍼 XML 파일에 의해 생성되는 맵퍼 클래스를 빈에 주입 할 수 있도록 설정 -->
+	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+		<property name="basePackage" value="com.spring.www" />
+	</bean>
+
+	<!-- 트랜잭션 관리자. id가 transactionManager이면, 아래 tx:annotation-driven에서 transactionManager 
+		속성을 지정할 필요 없음 -->
+	<bean id="transactionManager"
+		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	
+	<!-- 애노테이션으로 트랜잭션 설정 할 수 있도록 -->
+	<tx:annotation-driven />
+	<!--tx:annotation-driven transaction-manager="transactionManager" /-->
+ 
+	<!-- =================================================================================================== -->
+</beans>

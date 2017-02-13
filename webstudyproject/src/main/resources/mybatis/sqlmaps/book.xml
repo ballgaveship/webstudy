@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- namespace에서 interface로 정의된 DAO를 정확히 명시해주어야 한다 -->
+<mapper namespace="com.spring.www.dao.DataBookDao">
+	<select id="getBookInfo" resultType="com.study.domain.Book">
+		SELECT
+		ID,
+		NAME,
+		WRITER,
+		PRICE,
+		GENRE,
+		PUBLISHER,
+		CNT
+		FROM
+		BOOKS
+	</select>
+	<select id="getBookName" parameterType="string" resultType="string">
+		SELECT
+		NAME
+		FROM
+		BOOKS
+		WHERE
+		ID = #{id}
+	</select>
+</mapper>

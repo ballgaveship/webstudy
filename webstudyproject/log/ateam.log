@@ -1,0 +1,25 @@
+2017-02-13 09:23:03,461 INFO  [main][start] com.study.controller.MainController[24] - 2
+2017-02-13 09:23:03,463 INFO  [main][start] com.study.controller.MainController[24] - 1
+2017-02-13 09:23:03,464 INFO  [main][start] com.study.controller.MainController[24] - 3
+2017-02-13 09:23:03,464 INFO  [main][start] com.study.controller.MainController[24] - TEST            
+2017-02-13 09:27:45,915 INFO  [main][start] com.study.controller.MainController[26] - 2
+2017-02-13 09:27:45,917 INFO  [main][start] com.study.controller.MainController[26] - 1
+2017-02-13 09:27:45,917 INFO  [main][start] com.study.controller.MainController[26] - 3
+2017-02-13 09:27:45,917 INFO  [main][start] com.study.controller.MainController[26] - TEST            
+2017-02-13 09:28:23,906 INFO  [main][start] com.study.controller.MainController[26] - 2
+2017-02-13 09:28:23,908 INFO  [main][start] com.study.controller.MainController[26] - 1
+2017-02-13 09:28:23,908 INFO  [main][start] com.study.controller.MainController[26] - 3
+2017-02-13 09:28:23,908 INFO  [main][start] com.study.controller.MainController[26] - TEST            
+2017-02-13 09:41:31,373 INFO  [main][start] com.study.controller.MainController[26] - 2
+2017-02-13 09:41:31,375 INFO  [main][start] com.study.controller.MainController[26] - 1
+2017-02-13 09:41:31,375 INFO  [main][start] com.study.controller.MainController[26] - 3
+2017-02-13 09:41:31,375 INFO  [main][start] com.study.controller.MainController[26] - TEST            
+2017-02-13 09:42:32,916 INFO  [main][start] com.study.controller.MainController[26] - 2
+2017-02-13 09:42:32,919 INFO  [main][start] com.study.controller.MainController[26] - 1
+2017-02-13 09:42:32,919 INFO  [main][start] com.study.controller.MainController[26] - 3
+2017-02-13 09:42:32,919 INFO  [main][start] com.study.controller.MainController[26] - TEST            
+2017-02-13 10:21:02,411 INFO  [main][checkAllBook] com.study.service.impl.DataBookServiceImpl[25] - Book(id=A1, name=홍길동전, writer=허균, price=300.00, genre=소설, publisher=허균 출판사, cnt=0)
+2017-02-13 10:21:02,413 INFO  [main][checkAllBook] com.study.service.impl.DataBookServiceImpl[25] - Book(id=B1, name=레미제라블, writer=빅토르 위고, price=900.00, genre=소설, publisher=빅토르 위고 출판사, cnt=0)
+2017-02-13 10:21:02,414 INFO  [main][test] com.study.controller.MainController[25] - SUCCESS
+2017-02-13 13:03:26,276 INFO  [main][selectAllBookTest] com.test.dao.DataBookDaoTest[32] - Book(id=A1, name=홍길동전, writer=허균, price=300.00, genre=소설, publisher=허균 출판사, cnt=0)
+2017-02-13 13:03:26,278 INFO  [main][selectAllBookTest] com.test.dao.DataBookDaoTest[32] - Book(id=B1, name=레미제라블, writer=빅토르 위고, price=900.00, genre=소설, publisher=빅토르 위고 출판사, cnt=0)

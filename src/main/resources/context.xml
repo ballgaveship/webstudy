@@ -23,11 +23,6 @@
 		<constructor-arg index="0" ref="sqlSessionFactory" />
 	</bean>
 
-	<!-- 맵퍼 인터페이스와 맵퍼 XML 파일에 의해 생성되는 맵퍼 클래스를 빈에 주입 할 수 있도록 설정 -->
-	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-		<property name="basePackage" value="com.spring.www" />
-	</bean>
-
 	<!-- 트랜잭션 관리자. id가 transactionManager이면, 아래 tx:annotation-driven에서 transactionManager 
 		속성을 지정할 필요 없음 -->
 	<bean id="transactionManager"

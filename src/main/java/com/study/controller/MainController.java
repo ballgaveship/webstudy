@@ -16,11 +16,11 @@ public class MainController {
 	@Autowired
 	private DataBookService dataBookService;
 
-	@RequestMapping(value = "/", method = RequestMethod.GET)
+	@RequestMapping(value = "/checkbook", method = RequestMethod.GET)
 	public boolean home() {
 		log.info("CheckAllBook");
 		return dataBookService.checkAllBook();
 
 	}
-
+	
 }
